@@ -4,6 +4,6 @@ export const setOrders = orders => ({
 });
 
 export const addOrders = orders => ({
-  type: 'ADD_ORDER',
+  type: 'ADD_ORDERS',
   orders
 })

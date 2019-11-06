@@ -21,4 +21,26 @@ describe('OrderForm', () => {
   it('should match the snapshot with the data passed in', () => {
     expect(wrapper).toMatchSnapshot()
   })
+
+  // it('should call the handleIngredientChange method on click of the ingredient buttons', () => {
+  //   const handleIngredientChange = jest.fn();
+    // const mockEvent = { preventDefault: jest.fn() }
+  //   wrapper.instance().forceUpdate()
+  //   wrapper.find('button.beans').simulate('click', mockEvent)
+  //   expect(handleIngredientChange).toHaveBeenCalled()
+  // })
+
+  it('should call handleSubmit on click of the submit button', () => {
+    const handleSubmit = jest.fn();
+    const mockEvent = { preventDefault: jest.fn() }
+    const eventVals = {name: 'VIctor', ingredients:['stuff']}
+    wrapper.instance().forceUpdate();
+
+    wrapper.find('button.sub-btn').simulate('click', mockEvent)
+
+    expect(wrapper.instance().handleSubmit).toHaveBeenCalledWith(eventVals)
+    //WHY ISNT THIS WORKINGGGGGGGGGGGGGGGG
+  })
+
+
 });

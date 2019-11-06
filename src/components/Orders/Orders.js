@@ -40,7 +40,7 @@ class Orders extends Component {
               return <li>{ingredient}</li>
             })}
           </ul>
-          <button onClick={(e) => this.deleteOrder(e)}> Delete order </button>
+          <button onClick={(() => deleteOrder(order))}> Delete order </button>
         </div>
       )
     });

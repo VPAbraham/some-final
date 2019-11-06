@@ -23,6 +23,7 @@ export const deleteOrder = async (order) => {
   };
 
   let response = await fetch(`http://localhost:3001/api/v1/orders/${order.id}`, options);
-  let data = await response.json()
-  return data
+  // let data = await response.json()
+  console.log(response)
+  return response
 }
